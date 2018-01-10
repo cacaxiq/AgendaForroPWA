@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaForro", "AgendaForro\AgendaForro.csproj", "{36835E7C-378D-4E68-93C3-E4A4CF920CAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36835E7C-378D-4E68-93C3-E4A4CF920CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36835E7C-378D-4E68-93C3-E4A4CF920CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36835E7C-378D-4E68-93C3-E4A4CF920CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36835E7C-378D-4E68-93C3-E4A4CF920CAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8F84CB3-CED3-4EE1-88E7-7B549442D803}
+	EndGlobalSection
+EndGlobal
