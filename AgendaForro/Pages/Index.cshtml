@@ -18,6 +18,7 @@
         $(document).ready(function () {
 
             // page is now ready, initialize the calendar...
+  
 
             $('#calendar').fullCalendar({
                 header: {
@@ -28,17 +29,38 @@
                 footer: {
                     center: 'month,agendaWeek,agendaDay,listMonth'
                 },
-                defaultDate: '2017-12-12',
                 locale: "pt-br",
                 buttonIcons: true, // show the prev/next text
                 weekNumbers: false,
                 navLinks: true, // can click day/week names to navigate views
                 editable: false,
-                googleCalendarApiKey: 'AIzaSyCBs8jW6L04rDYCKkjZw5w72a2XF6FPoAw',
                 events: {
-                    googleCalendarId: '11klfua8cphod2otnvdatr624s@group.calendar.google.com'
+                    url: 'data.json',
+                    cache: true
                 }
             })
+
+
+            //$('#calendar').fullCalendar({
+            //    header: {
+            //        left: 'title',
+            //        right: 'prev,next,today',
+            //        center: ''
+            //    },
+            //    footer: {
+            //        center: 'month,agendaWeek,agendaDay,listMonth'
+            //    },
+            //    defaultDate: '2017-12-12',
+            //    locale: "pt-br",
+            //    buttonIcons: true, // show the prev/next text
+            //    weekNumbers: false,
+            //    navLinks: true, // can click day/week names to navigate views
+            //    editable: false,
+            //    googleCalendarApiKey: 'AIzaSyCBs8jW6L04rDYCKkjZw5w72a2XF6FPoAw',
+            //    events: {
+            //        googleCalendarId: '11klfua8cphod2otnvdatr624s@group.calendar.google.com'
+            //    }
+            //})
         });
     </script>
 }
