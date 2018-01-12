@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebEssentials.AspNetCore.Pwa;
-using Plugin.Connectivity;
 
 namespace AgendaForro
 {
