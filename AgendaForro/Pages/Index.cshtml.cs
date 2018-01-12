@@ -1,9 +1,7 @@
 ﻿using AgendaForro.Helpers;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace AgendaForro.Pages
 {
@@ -18,14 +16,16 @@ namespace AgendaForro.Pages
 
         public void OnGet()
         {
-            IPNetwork net = new IPNetwork();
-            var calendarEvents = CalendarService.GenerateCalendarEvent(50);
+            if (ConnectivityService.IsConnected())
+            {
+                var calendarEvents = CalendarService.GenerateCalendarEvent(50);
 
-            var webRoot = _env.WebRootPath;
-            var file = System.IO.Path.Combine(webRoot, "data.json");
+                var webRoot = _env.WebRootPath;
+                var file = System.IO.Path.Combine(webRoot, "data.json");
 
-            string jsonData = JsonConvert.SerializeObject(calendarEvents, Formatting.None);
-            System.IO.File.WriteAllText(file, jsonData);
+                string jsonData = JsonConvert.SerializeObject(calendarEvents, Formatting.None);
+                System.IO.File.WriteAllText(file, jsonData);
+            }
         }
     }
 }
