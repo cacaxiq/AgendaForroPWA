@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
     <PublishDir>$(OutDir)</PublishDir>
+    <preserveCompilationContext>true</preserveCompilationContext>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Google.Apis.Sheets.v4" Version="1.32.0.1101" />
