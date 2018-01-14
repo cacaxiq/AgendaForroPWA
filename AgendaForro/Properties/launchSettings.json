@@ -2,6 +2,10 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/AgendaForro",
+      "sslPort": 0
+    },
     "iisExpress": {
       "applicationUrl": "http://localhost:51807/",
       "sslPort": 0
@@ -15,13 +19,11 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "AgendaForro": {
-      "commandName": "Project",
-      "launchBrowser": true,
+    "Production": {
+      "commandName": "IIS",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "http://localhost:51808/"
+        "ASPNETCORE_ENVIRONMENT": "Production"
+      }
     }
   }
 }

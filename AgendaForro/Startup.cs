@@ -1,3 +1,5 @@
+using AgendaForro.Helpers;
+using AgendaForro.Helpers.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -20,6 +22,8 @@ namespace AgendaForro
         {
             services.AddMvc();
             services.AddProgressiveWebApp(new PwaOptions { RegisterServiceWorker = true });
+
+            services.AddSingleton<IGoogleSheetsService, GoogleSheetsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

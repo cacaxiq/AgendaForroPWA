@@ -1,4 +1,5 @@
 ﻿using AgendaForro.Helpers;
+using AgendaForro.Helpers.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
@@ -8,17 +9,19 @@ namespace AgendaForro.Pages
     public class IndexModel : PageModel
     {
         private IHostingEnvironment _env;
+        private IGoogleSheetsService _sheets;
 
-        public IndexModel(IHostingEnvironment env)
+        public IndexModel(IHostingEnvironment env, IGoogleSheetsService sheets)
         {
             _env = env;
+            _sheets = sheets;
         }
 
         public void OnGet()
         {
             if (ConnectivityService.IsConnected())
             {
-                var calendarEvents = CalendarService.GenerateCalendarEvent(50);
+                var calendarEvents = _sheets.GetCalendarEvents();
 
                 var webRoot = _env.WebRootPath;
                 var file = System.IO.Path.Combine(webRoot, "data.json");
